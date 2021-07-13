@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Leanplum",
+        "repositoryURL": "git@github.com:Leanplum/Leanplum-iOS-SDK.git",
+        "state": {
+          "branch": null,
+          "revision": "a62f300a86916e93061a32924d2b65dd7f4c38af",
+          "version": "3.1.2"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

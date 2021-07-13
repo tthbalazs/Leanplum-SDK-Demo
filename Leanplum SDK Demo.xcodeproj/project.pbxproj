@@ -3,23 +3,20 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		9823FC73269D9968009861F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9823FC72269D9968009861F0 /* AppDelegate.swift */; };
-		9823FC75269D9968009861F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9823FC74269D9968009861F0 /* SceneDelegate.swift */; };
-		9823FC77269D9968009861F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9823FC76269D9968009861F0 /* ViewController.swift */; };
 		9823FC7A269D9968009861F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9823FC78269D9968009861F0 /* Main.storyboard */; };
 		9823FC7C269D9969009861F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9823FC7B269D9969009861F0 /* Assets.xcassets */; };
 		9823FC7F269D9969009861F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9823FC7D269D9969009861F0 /* LaunchScreen.storyboard */; };
+		9823FC88269D99A4009861F0 /* Leanplum in Frameworks */ = {isa = PBXBuildFile; productRef = 9823FC87269D99A4009861F0 /* Leanplum */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9823FC6F269D9968009861F0 /* Leanplum SDK Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Leanplum SDK Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9823FC72269D9968009861F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9823FC74269D9968009861F0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9823FC76269D9968009861F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9823FC79269D9968009861F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9823FC7B269D9969009861F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9823FC7E269D9969009861F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -31,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9823FC88269D99A4009861F0 /* Leanplum in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,8 +55,6 @@
 			isa = PBXGroup;
 			children = (
 				9823FC72269D9968009861F0 /* AppDelegate.swift */,
-				9823FC74269D9968009861F0 /* SceneDelegate.swift */,
-				9823FC76269D9968009861F0 /* ViewController.swift */,
 				9823FC78269D9968009861F0 /* Main.storyboard */,
 				9823FC7B269D9969009861F0 /* Assets.xcassets */,
 				9823FC7D269D9969009861F0 /* LaunchScreen.storyboard */,
@@ -83,6 +79,9 @@
 			dependencies = (
 			);
 			name = "Leanplum SDK Demo";
+			packageProductDependencies = (
+				9823FC87269D99A4009861F0 /* Leanplum */,
+			);
 			productName = "Leanplum SDK Demo";
 			productReference = 9823FC6F269D9968009861F0 /* Leanplum SDK Demo.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +109,9 @@
 				Base,
 			);
 			mainGroup = 9823FC66269D9968009861F0;
+			packageReferences = (
+				9823FC86269D99A4009861F0 /* XCRemoteSwiftPackageReference "Leanplum-iOS-SDK" */,
+			);
 			productRefGroup = 9823FC70269D9968009861F0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,9 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9823FC77269D9968009861F0 /* ViewController.swift in Sources */,
 				9823FC73269D9968009861F0 /* AppDelegate.swift in Sources */,
-				9823FC75269D9968009861F0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +341,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9823FC86269D99A4009861F0 /* XCRemoteSwiftPackageReference "Leanplum-iOS-SDK" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:Leanplum/Leanplum-iOS-SDK.git";
+			requirement = {
+				kind = exactVersion;
+				version = 3.1.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9823FC87269D99A4009861F0 /* Leanplum */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9823FC86269D99A4009861F0 /* XCRemoteSwiftPackageReference "Leanplum-iOS-SDK" */;
+			productName = Leanplum;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9823FC67269D9968009861F0 /* Project object */;
 }
